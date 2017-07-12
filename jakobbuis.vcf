@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Jakob Buis
+N:Buis;Jakob;;;
+EMAIL;TYPE=INTERNET:jakob@jakobbuis.nl
+TEL;TYPE=CELL:+31681130415
+TITLE:webdeveloper
+item1.URL:www.jakobbuis.nl
+item1.X-ABLabel:PROFILE
+END:VCARD
