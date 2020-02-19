@@ -7,6 +7,14 @@ body {
     color: #555;
 }
 
+h1 {
+    line-height: 1;
+}
+
+ h1 img {
+    vertical-align: bottom;
+ }
+
 h1, h2, strong {
     color: #333;
 }
