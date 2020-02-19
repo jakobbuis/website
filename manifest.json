@@ -1,6 +1,20 @@
 {
     "short_name": "Jakob",
     "name": "Jakob Buis",
-    "start_url": "index.html",
-    "theme_color": "#992525"
+    "start_url": "/",
+    "theme_color": "#992525",
+    "icons": [
+        {
+            "src": "/images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "display": "minimal-ui",
+    "background_color": "#992525"
 }
