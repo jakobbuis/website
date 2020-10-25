@@ -1,6 +1,6 @@
-// Register the serviceworker
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/serviceworker.js');
-    });
-}
+// Remove all previous service workers
+navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    for(let registration of registrations) {
+        registration.unregister();
+    }
+});
