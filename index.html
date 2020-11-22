@@ -84,6 +84,13 @@
         <li>My dream car is a <a href="https://en.wikipedia.org/wiki/Triumph_Spitfire">Triumph Spitfire</a>. I've driven one and I'd like to own one someday.</li>
     </ul>
 
-    <script type="text/javascript" src="/main.js"></script>
+    <script>
+        // Remove all previous service workers (experiment discontinued)
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister();
+            }
+        });
+    </script>
 </body>
 </html>
