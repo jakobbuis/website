@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Disallow: /c43ea6d5-6e05-4c7b-8cda-fa7673cdee87.html
