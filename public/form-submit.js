@@ -26,10 +26,13 @@ document.querySelectorAll('form').forEach(form => {
 
 function clear(form) {
     form.querySelectorAll(':scope .form-message').forEach(m => m.remove());
+    var button = form.querySelectorAll(':scope button[type="submit"]')[0];
+    button.removeAttribute("disabled");
 }
 
 function spinner(form) {
     var button = form.querySelectorAll(':scope button[type="submit"]')[0];
+    button.setAttribute("disabled", "disabled");
     var spinner = document.createElement("span");
     spinner.classList.add("form-message", "spinner");
     spinner.innerHTML = "🔄 Verzenden...";
