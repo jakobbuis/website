@@ -19,6 +19,44 @@
     <p>
         <a href="/assets/scrum-talk-amsterdamphp-2025.pdf" target="_blank">Download slides (PDF)</a>
     </p>
+
+    <h2>Add your feedback</h2>
+    <p>
+        I'd love to hear your feedback. You can use this form to send it directly to me. If you want me to reach out
+        back to you, make sure to include your email address or phone number. Thanks!
+    </p>
+    <p>
+        Alternatively, if you want to include an attachment or a selfie or whatever, you can email me at <a
+            href="mailto:jakob@jakobbuis.nl">jakob@jakobbuis.nl</a>.
+    </p>
+    <form action="submit.php" method="POST">
+        <input type="hidden" name="form" value="feedback">
+
+        <p>
+            <textarea name="feedback" id="feedback" placeholder="Type your comments here..."></textarea>
+        </p>
+        <p>
+            <button type="submit">Send feedback</button>
+        </p>
+    </form>
+
+    <h2>Assessment</h2>
+    <p>
+        In the near future, I'm launching an assessment for companies to help them get started with the topics in this
+        talk. This will likely be 1-2 days on-site; resulting in clear and actionable advice, tailored to your
+        situation. If you're not satisfied with the assessment, we offer a money-back guarantee. If you're interested in
+        participating in the pilot, please leave your email address below.
+    </p>
+    <form action="submit.php" method="POST">
+        <input type="hidden" name="form" value="assessment">
+        <p>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Your email address">
+        </p>
+        <p>
+            <button type="submit">Contact me when it's ready</button>
+        </p>
+    </form>
 </body>
 
 </html>
