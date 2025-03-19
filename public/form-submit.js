@@ -6,24 +6,34 @@ document.querySelectorAll('form').forEach(form => {
         const target = form.getAttribute('action');
         const method = form.getAttribute('method');
 
-        fetch(target, {
-            method: method,
-            body: formData,
-        }).then((response) => {
+        spinner(form);
+        Promise.all([
+            new Promise((resolve) => setTimeout(() => resolve(null), 1500)),
+            fetch(target, {
+                method: method,
+                body: formData,
+            }),
+        ]).then(([auth, response]) => {
+            clear(form);
             if (!response.ok) {
                 showError(form, response);
             } else {
                 success(form);
             }
-        }).catch(() => {
-            showError(form);
         });
-
     });
 });
 
 function clear(form) {
     form.querySelectorAll(':scope .form-message').forEach(m => m.remove());
+}
+
+function spinner(form) {
+    var button = form.querySelectorAll(':scope button[type="submit"]')[0];
+    var spinner = document.createElement("span");
+    spinner.classList.add("form-message", "spinner");
+    spinner.innerHTML = "🔄 Verzenden...";
+    button.after(spinner);
 }
 
 function success(form) {
