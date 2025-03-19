@@ -35,7 +35,7 @@ function spinner(form) {
     button.setAttribute("disabled", "disabled");
     var spinner = document.createElement("span");
     spinner.classList.add("form-message", "spinner");
-    spinner.innerHTML = "🔄 Verzenden...";
+    spinner.innerHTML = "🔄 Sending...";
     button.after(spinner);
 }
 
@@ -43,7 +43,7 @@ function success(form) {
     var button = form.querySelectorAll(':scope button[type="submit"]')[0];
     var success = document.createElement("span");
     success.classList.add("form-message", "success");
-    success.innerHTML = "✅ Verzonden";
+    success.innerHTML = "✅ Sent";
     button.after(success);
 }
 
@@ -52,11 +52,11 @@ function showError(form, response) {
     var error = document.createElement("span");
     error.classList.add("form-message", "failure");
     if (!response) {
-        error.innerHTML = "❌ Niet verzonden: onbekende fout";
+        error.innerHTML = "❌ Failed to sent: unknown error";
         button.after(error);
     } else {
         response.text().then(text => {
-            error.innerHTML = "❌ Niet verzonden: " + text;
+            error.innerHTML = "❌ Failed to sent: " + text;
             button.after(error);
         });
     }
