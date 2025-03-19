@@ -9,9 +9,7 @@ set('repository', 'git@github.com:jakobbuis/website.git');
 set('default_stage', 'production');
 set('keep_releases', 3);
 
-add('shared_files', []);
-add('shared_dirs', []);
-add('writable_dirs', []);
+set('shared_files', ['.env']);
 
 host('jakobbuis.nl')
     ->set('hostname', 'jakobbuis.nl')
