@@ -13,7 +13,7 @@ h1 {
 }
 
 h1 img {
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 h1,
@@ -27,7 +27,7 @@ h2 {
     padding-top: 1em;
 }
 
-strong {
+.contact strong {
     display: inline-block;
     width: 10em;
 }
@@ -57,4 +57,12 @@ textarea {
 .form-message {
     display: inline-block;
     margin-left: 0.5em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2em;
 }
