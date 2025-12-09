@@ -53,11 +53,6 @@ textarea {
     }
 }
 
-.form-message {
-    display: inline-block;
-    margin-left: 0.5em;
-}
-
 header {
     display: flex;
     justify-content: space-between;
